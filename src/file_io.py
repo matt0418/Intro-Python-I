@@ -10,9 +10,15 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
+with open('./foo.txt') as f:
+    read_data = f.read()
+    print(read_data)
+
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make 
 # sure that it contains what you expect it to contain
 
+with open('./bar.txt', "w+") as f:
+    write_data = f.write("THis is a test line \n this is another line \n this is another")
 # YOUR CODE HERE
