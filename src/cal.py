@@ -21,4 +21,29 @@ and does the following:
 
 import sys
 import calendar
-from datetime import datetime
+import datetime
+
+now = datetime.datetime.today()
+
+
+userInput = input("Input month and year seperated by a comma:").split(',')
+# print(userInput)
+# print(len(userInput))
+# print(len(userInput[0]))
+# print(len(userInput))
+def makeCal(a = now.month,b = now.year ):
+  myCal = calendar.TextCalendar(calendar.SUNDAY)
+  str = myCal.formatmonth(b, a)
+  print(str)
+
+if len(userInput) == 1 and len(userInput[0]) == 0:
+  makeCal()
+if len(userInput) == 1 and len(userInput[0]) > 0:
+  makeCal(int(userInput[0]))
+if len(userInput) == 2:
+  makeCal(int(userInput[0]), int(userInput[1]))
+if len(userInput) > 3:
+  print("provide no more then two arguments")
+
+
+
