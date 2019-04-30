@@ -21,10 +21,12 @@ print(a[-2])
 print(a[-3:])
 
 # Output the two middle elements in the array: [1, 7]
+# half = int(len(a)//2)
+# print(a[half-1:half+1])
 print(a[2:4])
 
 # Output every element except the first one: [4, 1, 7, 9, 6]
-print(a[2:])
+print(a[1:])
 
 # Output every element except the last one: [2, 4, 1, 7, 9]
 print(a[:-1])
